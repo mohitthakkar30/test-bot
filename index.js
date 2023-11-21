@@ -20,10 +20,7 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
     const bodyData = req.body;
-    console.log(JSON.stringify(bodyData));
-
-    webhookClient.send(`GM ${bodyData.name}!`);
-    
+    webhookClient.send(`Wow, ${bodyData[0].from} just voted...`); 
     res.send(JSON.stringify(bodyData));
 });
 

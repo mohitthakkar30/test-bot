@@ -35,9 +35,8 @@ const filter = {
 
 provider.on(filter, (log, event) => {
   console.log("Event received:");
-  console.log("------------------------");
-  console.log("Address - " + "0x" + log.topics[1].slice(26));
   webhookClient.send("Wow! " + "0x" + log.topics[1].slice(26) + " just voted!");
+  console.log("------------------------");
 });
 
 console.log("Listening for events...");

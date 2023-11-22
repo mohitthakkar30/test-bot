@@ -17,7 +17,6 @@ app.get("/", (req, res) => {
   res.send("Welcome");
 });
 
-//Alternate way to send data to discord
 const contractAddress = "0xcFF76d06F90af2668d7a259a2C12C3b88a1A13F3";
 
 const provider = new ethers.providers.JsonRpcProvider(
